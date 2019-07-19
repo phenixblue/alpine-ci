@@ -9,3 +9,5 @@ RUN chmod +x ./kubectl; mv ./kubectl /usr/local/bin/
 
 RUN curl -LO https://github.com/kubernetes-sigs/kind/releases/download/v0.4.0/kind-linux-amd64 -o kind
 RUN chmod +x ./kind*; mv ./kind* /usr/local/bin/kind
+
+CMD ["dind", "dockerd"]
